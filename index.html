@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatvamasimedia | Official Channel & Digital Hub</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Cinzel/Outfit for dramatic display accents -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Crisp Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#08080A',
+                        charcoal: '#111115',
+                        carddark: '#16161C',
+                        gold: {
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                            accent: '#D4AF37'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-obsidian text-zinc-100 font-sans antialiased selection:bg-yellow-400 selection:text-black overflow-x-hidden">
+
+    <!-- ==================== STICKY NAVIGATION BAR ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-obsidian/85 backdrop-blur-md border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center text-black font-display font-black text-xl shadow-lg shadow-yellow-500/20 group-hover:scale-105 transition-transform">
+                        T
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-yellow-400 transition-colors">
+                            TATVAMASI<span class="text-yellow-400">MEDIA</span>
+                        </span>
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-zinc-400 font-medium">Official Studio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-zinc-300 hover:text-yellow-400 transition-colors py-2">Home</a>
+                    <a href="#videos" class="text-sm font-medium text-zinc-300 hover:text-yellow-400 transition-colors py-2">Videos</a>
+                    <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-yellow-400 transition-colors py-2">About</a>
+                    <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-yellow-400 transition-colors py-2">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://www.youtube.com/@Tatvamasimedia" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-sm transition-all transform hover:-translate-y-0.5 shadow-lg shadow-yellow-400/20">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        <span>Subscribe</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-3 rounded-xl text-zinc-300 hover:text-yellow-400 hover:bg-zinc-900 transition-colors focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-zinc-800 px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-zinc-200 hover:bg-zinc-800 hover:text-yellow-400 transition-colors">Home</a>
+            <a href="#videos" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-zinc-200 hover:bg-zinc-800 hover:text-yellow-400 transition-colors">Videos</a>
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-zinc-200 hover:bg-zinc-800 hover:text-yellow-400 transition-colors">About</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-zinc-200 hover:bg-zinc-800 hover:text-yellow-400 transition-colors">Contact</a>
+            <div class="pt-3 px-2">
+                <a href="https://www.youtube.com/@Tatvamasimedia" target="_blank" rel="noopener noreferrer" 
+                   class="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-yellow-400 text-black font-bold text-base shadow-md">
+                    <i class="fa-brands fa-youtube text-xl"></i>
+                    <span>Subscribe on YouTube</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Ambient Golden Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[350px] h-[350px] bg-amber-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <!-- Channel Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-zinc-900/90 border border-yellow-500/30 text-yellow-400 text-xs sm:text-sm font-semibold tracking-wide mb-8 shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+                <span>WISDOM • CULTURE • CINEMATIC STORYTELLING</span>
+            </div>
+
+            <!-- Main Brand Headline -->
+            <h1 class="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white mb-6 leading-[1.08]">
+                Illuminating Truth Through <br class="hidden sm:block" />
+                <span class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
+                    Tatvamasimedia
+                </span>
+            </h1>
+
+            <!-- Inspiring Tagline -->
+            <p class="max-w-2xl mx-auto text-zinc-400 text-base sm:text-lg md:text-xl leading-relaxed mb-10 font-normal">
+                "Tat Tvam Asi" — You Are That. Dive into thought-provoking documentaries, timeless philosophy, cultural heritage, and inspiring stories crafted to awaken perspective.
+            </p>
+
+            <!-- Primary & Secondary Call-To-Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+                <a href="https://www.youtube.com/@Tatvamasimedia?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-extrabold text-base sm:text-lg transition-all transform hover:-translate-y-1 shadow-xl shadow-yellow-500/25">
+                    <i class="fa-brands fa-youtube text-2xl"></i>
+                    <span>Subscribe on YouTube</span>
+                </a>
+                
+                <a href="#videos"
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 hover:border-yellow-400/60 font-bold text-base sm:text-lg transition-all transform hover:-translate-y-1">
+                    <i class="fa-solid fa-play text-yellow-400 text-sm"></i>
+                    <span>Watch Latest</span>
+                </a>
+            </div>
+
+            <!-- Channel Highlights / Quick Stats Strip -->
+            <div class="mt-16 pt-10 border-t border-zinc-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl bg-charcoal/50 border border-zinc-800/60">
+                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-yellow-400">4K HDR</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 mt-1">Cinematic Visuals</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-charcoal/50 border border-zinc-800/60">
+                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-white">Weekly</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 mt-1">Original Releases</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-charcoal/50 border border-zinc-800/60">
+                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-yellow-400">100%</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 mt-1">Research Driven</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-charcoal/50 border border-zinc-800/60">
+                    <div class="font-display font-extrabold text-2xl sm:text-3xl text-white">Global</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 mt-1">Community Reach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED VIDEO SHOWCASE ==================== -->
+    <section id="videos" class="py-20 md:py-28 bg-charcoal border-y border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header + Filter Controls -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-yellow-400 font-bold text-xs uppercase tracking-[0.2em]">Featured Broadcasts</span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-2">
+                        Latest From The Studio
+                    </h2>
+                </div>
+
+                <!-- Interactive Category Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="category-filters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-yellow-400 text-black transition-all">
+                        All Videos
+                    </button>
+                    <button data-filter="philosophy" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-yellow-400 border border-zinc-800 transition-all">
+                        Philosophy
+                    </button>
+                    <button data-filter="heritage" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-yellow-400 border border-zinc-800 transition-all">
+                        Culture & Heritage
+                    </button>
+                    <button data-filter="documentary" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-yellow-400 border border-zinc-800 transition-all">
+                        Documentaries
+                    </button>
+                </div>
+            </div>
+
+            <!-- Responsive Video Cards Grid -->
+            <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video cards are injected dynamically via JS for interactive modal playback & filtering -->
+            </div>
+
+            <!-- View All YouTube Channel Link -->
+            <div class="mt-14 text-center">
+                <a href="https://www.youtube.com/@Tatvamasimedia/videos" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-3 px-7 py-3.5 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-yellow-400 border border-yellow-500/30 hover:border-yellow-400 font-bold text-sm sm:text-base transition-all">
+                    <span>Explore Full Video Library on YouTube</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 md:py-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Visual Card / Brand Emblem -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-gradient-to-br from-zinc-900 via-charcoal to-black p-8 sm:p-10 border border-yellow-500/25 shadow-2xl">
+                        <div class="w-16 h-16 rounded-2xl bg-yellow-400/10 border border-yellow-400/40 flex items-center justify-center text-yellow-400 text-3xl mb-6">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mb-4">
+                            The Meaning Behind <span class="text-yellow-400">Tatvamasi</span>
+                        </h3>
+                        <p class="text-zinc-400 leading-relaxed text-sm sm:text-base mb-6">
+                            Rooted in ancient wisdom, <strong class="text-zinc-200">Tat Tvam Asi</strong> translates to <em>"That Thou Art"</em>—a timeless reminder of the interconnectedness between individual consciousness and the universal truth.
+                        </p>
+                        <div class="p-4 rounded-2xl bg-black/60 border border-zinc-800 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-yellow-400 text-black flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Purpose-Driven Media</div>
+                                <div class="text-xs text-zinc-400">Bridging timeless heritage with modern cinema</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Vision & Content Pillars -->
+                <div class="lg:col-span-7">
+                    <span class="text-yellow-400 font-bold text-xs uppercase tracking-[0.2em]">Our Vision & Mission</span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-2 mb-6 leading-tight">
+                        Crafting Stories That Resonate Beyond The Screen
+                    </h2>
+                    <p class="text-zinc-300 text-base sm:text-lg leading-relaxed mb-8">
+                        At <span class="text-yellow-400 font-semibold">Tatvamasimedia</span>, we believe digital media should elevate the mind rather than merely distract it. Our studio is dedicated to producing deeply researched visual narratives, cultural explorations, and philosophical breakdowns designed for curious minds worldwide.
+                    </p>
+
+                    <!-- 3 Core Content Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                        <div class="p-5 rounded-2xl bg-carddark border border-zinc-800/90 hover:border-yellow-500/40 transition-colors">
+                            <i class="fa-solid fa-compass text-yellow-400 text-xl mb-3"></i>
+                            <h4 class="font-display font-bold text-white text-base mb-1.5">Deep Philosophy</h4>
+                            <p class="text-xs text-zinc-400 leading-relaxed">Decoding complex spiritual & life philosophies into clear, practical insights.</p>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-carddark border border-zinc-800/90 hover:border-yellow-500/40 transition-colors">
+                            <i class="fa-solid fa-landmark text-yellow-400 text-xl mb-3"></i>
+                            <h4 class="font-display font-bold text-white text-base mb-1.5">Cultural Roots</h4>
+                            <p class="text-xs text-zinc-400 leading-relaxed">Preserving untold histories, sacred traditions, and architectural marvels.</p>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-carddark border border-zinc-800/90 hover:border-yellow-500/40 transition-colors">
+                            <i class="fa-solid fa-clapperboard text-yellow-400 text-xl mb-3"></i>
+                            <h4 class="font-display font-bold text-white text-base mb-1.5">Visual Craft</h4>
+                            <p class="text-xs text-zinc-400 leading-relaxed">High-contrast cinematography, evocative soundscapes, and crisp narration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT & COLLABORATION SECTION ==================== -->
+    <section id="contact" class="py-20 md:py-28 bg-charcoal border-t border-zinc-800/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-yellow-400 font-bold text-xs uppercase tracking-[0.2em]">Get In Touch</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-2 mb-4">
+                    Collaborate With Tatvamasimedia
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Have a documentary topic suggestion, brand sponsorship inquiry, or creative collaboration idea? Send us a message directly.
+                </p>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="rounded-3xl bg-obsidian p-6 sm:p-10 border border-zinc-800 shadow-2xl">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="e.g. Aarav Sharma"
+                                   class="w-full px-4 py-3.5 rounded-xl bg-charcoal border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-c
